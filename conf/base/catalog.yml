@@ -1,0 +1,66 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+#
+
+
+#france_companies:
+#  filepath: data/01_raw/france_companies.csv
+#  type: pandas.CSVDataSet
+#
+#france_preprocessed_companies:
+# type: pandas.CSVDataSet
+# filepath: data/02_intermediate/france_preprocessed_companies.csv
+#
+#germany_companies:
+# filepath: data/01_raw/germany_companies.csv
+# type: pandas.CSVDataSet
+#
+#germany_preprocessed_companies:
+# type: pandas.CSVDataSet
+# filepath: data/02_intermediate/germany_preprocessed_companies.csv
+#
+
+#germany_final:
+# filepath: data/03_primary/germany.pq
+# type: pandas.ParquetDataSet
+#
+#
+#"switzerland_final":
+# filepath: data/03_primary/switzerland.pq
+# type: pandas.ParquetDataSet
+#
+#france_final:
+# filepath: data/03_primary/france.pq
+# type: pandas.ParquetDataSet
+
+
+### Patterns
+
+"{country}":
+  filepath: data/02_intermediate/{country}_companies.csv
+  type: pandas.CSVDataSet
+
+"{x}_{y}":
+  filepath: data/02_intermediate/{country}_companies.csv
+  type: pandas.CSVDataSet
+  versioned: true
+
+"{country}_preprocessed_companies":
+  filepath: data/02_intermediate/{country}_companies.csv
+  type: pandas.CSVDataSet
+  versioned: true
+
+"{country}s":
+ filepath: data/02_intermediate/{country}_companies.csv
+ type: pandas.CSVDataSet
+
+"{country}_companies":
+  filepath: data/01_raw/{country}_companies.csv
+  type: pandas.CSVDataSet
+
+"{country}_final":
+  filepath: data/03_primary/{country}.pq
+  type: pandas.ParquetDataSet
+
