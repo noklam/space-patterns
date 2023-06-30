@@ -15,16 +15,16 @@ def create_pipeline(**kwargs) -> Pipeline:
             outputs="france_preprocessed_companies",
             name="france_node",
         ),
-        node(
-            func=random_node,
-            inputs=["germany_companies", "params:hello"],
-            outputs="germany_preprocessed_companies",
-            name="germany_node",
-        ),
-        node(
-            func=random_node,
-            inputs=["switzerland_companies", "params:hello"],
-            outputs="switzerland_preprocessed_companies",
-            name="switzerland_node",
-        ),
+        # node(
+        #     func=random_node,
+        #     inputs=["germany_companies", "params:hello"],
+        #     outputs="germany_preprocessed_companies",
+        #     name="germany_node",
+        # ),
+        # node(
+        #     func=random_node,
+        #     inputs=["switzerland_companies", "params:hello"],
+        #     outputs="switzerland_preprocessed_companies",
+        #     name="switzerland_node",
+        # ),
     ])

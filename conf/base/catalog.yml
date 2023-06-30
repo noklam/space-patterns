@@ -5,9 +5,9 @@
 #
 
 
-#france_companies:
-#  filepath: data/01_raw/france_companies.csv
-#  type: pandas.CSVDataSet
+france_companies:
+ filepath: data/01_raw/france_companies.csv
+ type: pandas.CSVDataSet
 #
 #france_preprocessed_companies:
 # type: pandas.CSVDataSet
@@ -25,7 +25,7 @@
 #germany_final:
 # filepath: data/03_primary/germany.pq
 # type: pandas.ParquetDataSet
-#
+#§
 #
 #"switzerland_final":
 # filepath: data/03_primary/switzerland.pq
